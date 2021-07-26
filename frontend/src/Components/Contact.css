@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Baloo 2", cursive;
+}
+
+.contact-container .contactinfo {
+  display: flex;
+  top: 0;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #333;
+}
+.contact-container .contactinfo h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+.contact-container .contactinfo .contact-info {
+  position: relative;
+  margin: 20px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-container .contactinfo .contact-info li {
+  position: relative;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  cursor: pointer;
+}
+.contact-container .contactinfo .contact-info li span:nth-child(1) {
+  width: 40px;
+  min-width: 40px;
+}
+.contact-container .contactinfo .contact-info li span:nth-child(1) img {
+  max-width: 100%;
+  filter: invert(83%);
+  opacity: 0.5;
+}
+.contact-container .contactinfo .contact-info li span:nth-child(2) {
+  color: #fff;
+  margin-left: 10px;
+  font-weight: 100;
+  opacity: 0.5;
+}
+.contact-container .contactinfo .contact-info li:hover span:nth-child(1) img,
+.contact-container .contactinfo .contact-info li:hover span:nth-child(2) {
+  opacity: 1;
+}
+.contact-container .contactusform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px 50px;
+  background-color: #fff;
+  top: 0;
+}
+.contact-container .contactusform h2 {
+  color: #882;
+  font-size: 24px;
+  font-weight: 700;
+}
+.contact-container .contactusform .contact-formBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+.contact-container .contactusform .contact-formBox .contact-inputBox {
+  position: relative;
+  margin: 0 0 35px 0;
+  width: 100% !important;
+}
+.contact-container .contactusform .contact-formBox .contact-inputBox input,
+.contact-container .contactusform .contact-formBox .contact-inputBox textarea {
+  width: 100% !important;
+  padding: 5px 0;
+  resize: none;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  border: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+}
+.contact-container .contactusform .contact-formBox .contact-inputBox textarea {
+  min-height: 120px;
+}
+.contact-container .contactusform .contact-formBox .contact-inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  transition: 0.3s;
+  pointer-events: none;
+}
+.contact-container
+  .contactusform
+  .contact-formBox
+  .contact-inputBox
+  input:focus
+  ~ span,
+.contact-container
+  .contactusform
+  .contact-formBox
+  .contact-inputBox
+  textarea:focus
+  ~ span,
+.contact-container
+  .contactusform
+  .contact-formBox
+  .contact-inputBox
+  input:valid
+  ~ span,
+.contact-container
+  .contactusform
+  .contact-formBox
+  .contact-inputBox
+  textarea:valid
+  ~ span {
+  transform: translateY(-20px);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #ff4136;
+}
+.contact-container
+  .contactusform
+  .contact-formBox
+  .contact-inputBox
+  input[type="submit"] {
+  position: relative;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  max-width: 150px;
+  padding: 12px;
+}
+.contact-container
+  .contactusform
+  .contact-formBox
+  .contact-inputBox
+  input[type="submit"]:hover {
+  background-color: #dcdcdc;
+}
+.contact-container .contactusform .contact-formBox .w50 {
+  width: 47%;
+}
+.contact-container .contactusform .contact-formBox .w100 {
+  width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+  .contact-container .contactinfo h2 {
+    text-align: center;
+  }
+  .contact-container .contactinfo .contact-info {
+    flex-direction: row;
+  }
+  .contact-container .contactinfo li span:nth-child(2) {
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .contact {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#131313e1, #181818e1),
+      url(https://wallpaperaccess.com/full/391154.jpg) no-repeat;
+    color: #fff;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(#131313e1, #181818e1),
+    url(https://wallpaperaccess.com/full/391154.jpg)
+      no-repeat;
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  
+  }
+  .contact .contact-container {
+    position: relative;
+    width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+    margin: 0 20px 0 20px;
+  }
+  .contact .contact-container .contactinfo {
+    position: absolute;
+    top: 20%;
+    width: 350px;
+    height: calc(100% - 40%);
+    z-index: 1;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.3);
+    align-items: left;
+  }
+  .contact .contact-container .contactinfo h2 {
+    text-align: left;
+  }
+  .contact .contact-container .contactinfo .contact-info {
+    flex-direction: column;
+  }
+  .contact .contact-container .contactinfo li span:nth-child(2) {
+    margin-right: 0;
+  }
+  .contact .contact-container .contactusform {
+    position: absolute;
+    top: 10%;
+    height: calc(100% - 20%);
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+    margin-left: 150px;
+    padding-left: 250px;
+  }
+  .contact .contact-container .contactusform .contact-formBox {
+    flex-direction: row;
+  }
+}

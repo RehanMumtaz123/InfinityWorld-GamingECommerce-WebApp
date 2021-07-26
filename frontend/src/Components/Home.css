@@ -1,0 +1,341 @@
+/* upper section */
+* {
+  margin: 0;
+  padding: 0;
+}
+.landingPage {
+  /* Create grid spanning viewport width & height */
+  --fullGrid: 1 / 2 / -1 / -12;
+  display: grid;
+  grid-template-rows: 100vh;
+  overflow: hidden;
+  box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.5);
+}
+
+.video-bg {
+  /* 	--fullGrid: 1 / 1 / -1 / -1; */
+  /* Span the full grid */
+  grid-area: var(--fullGrid);
+
+  /* Re-size video to cover full screen while maintaining aspect ratio */
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+
+  /* Display video below overlay */
+  z-index: -1;
+}
+
+.video-bg::-webkit-media-controls {
+  display: none !important;
+}
+
+.video-overlay {
+  /* Span the full grid */
+  grid-area: var(--fullGrid);
+  font-size: 10px;
+
+  /* Center Content */
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  text-align: left;
+
+  /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.video-text {
+  font-size: calc(1.8em + 2.5vw);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4);
+}
+/* -------------------- */
+/* middle section */
+/* --------------------- */
+@font-face {
+  font-family: "Ohno Blazeface";
+  src: local("Ohno Blazeface 14 Point"), local("Ohno-Blazeface-14-Point"),
+    url("../fonts/OhnoBlazeface-14Point.woff2") format("woff2"),
+    url("../fonts/OhnoBlazeface-14Point.woff") format("woff"),
+    url("../fonts/OhnoBlazeface-14Point.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.text {
+  padding-top: 10px;
+  margin-top: 10px;
+  font-size: 50px;
+  font-family: "Ohno Blazeface";
+  justify-content: center;
+  text-align: center;
+}
+.text-in {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  color: grey;
+}
+
+/* ----------- */
+.section-page-Home,
+.square {
+  width: 600px !important;
+  height: 450px !important;
+
+  /* padding: 10px !important;
+  max-width: 500px; */
+}
+.infoo {
+  align-items: center !important;
+  font-size: 30px !important;
+  align-content: center;
+}
+.inooo {
+  font-size: 20px !important;
+}
+/* another section below` */
+
+.mid-section-image {
+  position: relative;
+  width: 100%; /* for IE 6 */
+}
+@font-face {
+  font-family: "Ohno Blazeface";
+  src: local("Ohno Blazeface 14 Point"), local("Ohno-Blazeface-14-Point"),
+    url("../fonts/OhnoBlazeface-14Point.woff2") format("woff2"),
+    url("../fonts/OhnoBlazeface-14Point.woff") format("woff"),
+    url("../fonts/OhnoBlazeface-14Point.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.mid-section-h2 {
+  position: absolute;
+  top: 540px;
+  text-align: center;
+  left: 100;
+  width: 100%;
+  color: white;
+  font: bold 24px/45px Helvetica, Sans-Serif;
+  letter-spacing: 3px;
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+}
+
+.mid-section-h2 span {
+  font-family: "Ohno Blazeface";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 30px;
+}
+
+/* gaeme section */
+.game-section {
+  background-color: black;
+  /* margin-top: auto; */
+}
+.game-section-container {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 30px;
+}
+/* .game-section-imag::after{
+    content: 'King OF fighter';
+    font-size: medium;
+    color: azure;
+    text-align: center;
+    align-content: center;
+} */
+
+/* servics */
+.service-wave-container {
+  position: relative;
+  background: #091d44;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+.service-container {
+  background: rgba(255, 255, 255, 1);
+  max-width: 400px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: 7px;
+}
+.service-container img {
+  padding: 10px;
+}
+.service-h1 {
+  font-size: 5rem;
+  font-family: "Ohno Blazeface";
+  letter-spacing: 8px;
+  margin: 7rem 1.25rem 4.5rem 1.25rem;
+}
+/* .service-wave-container {
+  background: #EEE;
+} */
+.service-wave-container > svg {
+  display: block;
+}
+.service-p {
+  font-size: 1.4rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: grey;
+  padding: 2px;
+  /* margin: 0 1.25rem 2.5rem 1.25rem; */
+}
+
+/* review section?
+ */
+.review-section-text {
+  padding-top: 10px;
+  margin-top: 10px;
+  font-size: 70px;
+  font-family: "Ohno Blazeface";
+  justify-content: center;
+  text-align: center;
+}
+.testimotionals {
+  width: 30px;
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: 50px;
+}
+
+.testimotionals .card {
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+  margin: 0 auto;
+  background: #333;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.testimotionals .card .layer {
+  z-index: 1;
+  position: absolute;
+  top: calc(100% - 2px);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background: linear-gradient(to left, orange, tomato);
+  transition: 0.5s;
+}
+
+.testimotionals .card .content {
+  z-index: 2;
+  position: relative;
+}
+
+.testimotionals .card:hover .layer {
+  top: 0;
+}
+
+.testimotionals .card .content p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+}
+.testimotionals .card .content .image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.testimotionals .card .conte nt .details h2 {
+  font-size: 18px;
+  color: white;
+}
+.testimotionals .card .content .details h2 span {
+  font-size: 18px;
+  color: purple;
+  transition: 0.5s;
+}
+.testimotionals .card:hover .content .details h2 span {
+  color: white;
+  position: relative;
+}
+/* contact section  */
+.home-contact-custom-btn {
+  text-align: center;
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.home-contact-btn-10 {
+  background: rgb(22, 9, 240);
+  background: linear-gradient(
+    0deg,
+    rgba(22, 9, 240, 1) 0%,
+    rgba(49, 110, 244, 1) 100%
+  );
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.home-contact-btn-10:after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+}
+.home-contact-btn-10:hover {
+  color: #fff;
+  border: none;
+  background: transparent;
+}
+.home-contact-btn-10:hover:after {
+  background-color: #091d44;
+  /* background: rgb(0, 3, 255); */
+
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.home-contact {
+  background-color: #091d44;
+}
+.home-contact-text {
+  padding-top: 10px;
+  margin-top: 10px;
+  font-size: 60px;
+  font-family: "Ohno Blazeface";
+  justify-content: center;
+  align-items: flex-end;
+  text-align: left;
+}
+.home-contact-img {
+  margin-top: -5px;
+}
