@@ -73,7 +73,10 @@
 .PS-six {
   background-image: url(https://www.gamespot.com/a/uploads/original/1552/15524586/3755988-ps5features_gamepresets.jpg);
 }
-
+.PS-seven {
+  background-image: url(https://www.gamervines.com/wp-content/uploads/2021/05/PlayStation-5-Cosmic-Red-and-Midnight-Black-DualSense-Controller.jpg);
+  /* background-image: url(https://i2.wp.com/manualdosgames.com/wp-content/uploads/2020/10/PS5-2.png); */
+}
 /* // middle section */
 .PS-midheader {
   /* display: flex; */
@@ -93,31 +96,74 @@
   width: 1000px;
   height: 450px;
 }
-.PS-Allheader img {
-    width: 300px;
-    height: 190px;
-}
 .PS-midheader-div h1 {
-    font-family: "Ohno Blazeface";
-    color: aliceblue;
-    /* justify-content: center ;
-    align-items: flex-start; */
+  font-family: "Ohno Blazeface";
+  color: aliceblue;
 }
 .PS-midheader-div p {
-    color: aliceblue;
-    font-size: 30px;
+  color: aliceblue;
+  font-size: 30px;
+  text-align: center;
+  font-family: inherit;
+}
+.PS-Allheaderleft {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.PS-Allheaderleft img {
+  width: 200px;
+  height: 190px;
+}
+.PS-Allheaderleft b {
+  text-align: center;
+  font-size: 20px;
+  color: aliceblue;
+}
+.PS-Allheaderleft h3 {
+  font-family: "Ohno Blazeface";
+  color: aliceblue;
+  text-align: center;
+}
+
+/* // */
+.PS-lastheader {
+  align-items: center;
+  height: 80vh;
+  width: 100vw;
+  background: black;
+}
+
+.material {
+  position: relative;
+  font-size: 30px;
+  color: aliceblue;
+  font-family: inherit;
+  top: 40px;
+}
+
+/* new */
+.PS-llastheader {
+  align-items: center;
+  height: 80vh;
+  width: 100vw;
+  background: black;
+}
+.iimg {
+  background-blend-mode: saturation;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.PS-llastheader p {
+    display: flex;
+    justify-content: center;
     text-align: center;
-    font-family: inherit;
-}
-.PS-Allheaderleft {
-  text-align: left;
-}
-.PS-Allheaderleft {
-  text-align: left;
-}
-.PS-img1{
-    
-}
-.PS-img2{
-    
-}
+    font-family: unset;
+    font-size: 29px;
+    color: aliceblue;
+    align-items: center;
+  }

@@ -1,7 +1,8 @@
 import React from "react";
 import "./PS.css";
 import vidd from "../Green and Red Clean Video-centric Accessories Review Fashion 169 Video (1).mp4";
-
+import { Button } from "@material-ui/core";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 export default function PS() {
   return (
     <>
@@ -85,45 +86,163 @@ export default function PS() {
             </p>
           </div>
 
-          <div className="PS-Allheaderleft">
-            <div className="PS-midheader-div ">
-              <img
-                className="PS-img1"
-                src="https://mega00.blob.core.windows.net/playstation/Untitled.png"
-              />
-            </div>
-            <div className="PS-midheader-div ">
-              <h1>Ultra-high speed SSD</h1>
-            </div>
-            <div className="PS-midheader-div ">
-              <p>
-                Maximize your play sessions with near instant load times for
-                installed PS5™ games
-              </p>
+          <div className="container PS-Allheaderleft">
+            <div className="row">
+              <div className="col-6">
+                <div className="PS-img1">
+                  <img
+                    className=""
+                    src="https://mega00.blob.core.windows.net/playstation/Untitled.png"
+                  />
+                </div>
+                <div className=" ">
+                  <h3>Ultra-high speed SSD</h3>
+                </div>
+                <div className=" ">
+                  <b>
+                    Maximize your play sessions with near instant load times for
+                    installed PS5™ games
+                  </b>
+                </div>
+              </div>
+              <div className="col-6">
+                <div className=" ">
+                  <img
+                    className="PS-img2"
+                    src="https://mega00.blob.core.windows.net/playstation/8.png"
+                    // width="190px"
+                    // height="50px"
+                  />
+                </div>
+                <div className=" ">
+                  <h3>Integrated I/O</h3>
+                </div>
+                <div className=" ">
+                  <b>
+                    The custom integration of the PS5 console's systems lets
+                    creators pull data from the SSD so quickly that they can
+                    design games in ways never before possible.
+                  </b>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="PS-Allheader">
-            <div className="PS-midheader-div ">
+        </div>
+      </div>
+
+      {/* more */}
+      <div class="PS-lastheader ">
+        <div className="container">
+          <div className="row">
+            <div className="col-8 ">
               <img
-                className="PS-img2"
-                src="https://mega00.blob.core.windows.net/playstation/8.png"
-                width="190px"
-                height="50px"
+                className=""
+                src="https://mega00.blob.core.windows.net/playstation/[CITYPNG.COM]Sony Playstation Ps5 Side View - 1732x848.png"
+                width="690px"
+                height="370px"
               />
             </div>
-            <div className="PS-midheader-div ">
-              <h1>Integrated I/O</h1>
-            </div>
-            <div className="PS-midheader-div ">
-              <p>
-                The custom integration of the PS5 console's systems lets
-                creators pull data from the SSD so quickly that they can design
-                games in ways never before possible.
+            <div className="col-4 material">
+              <p className="">
+                Sony - PlayStation 5 Console
+                <br />
+                <small>
+                  {" "}
+                  Model : 3005718 SKU : 6426149 <br /> Release Date : 11 / 12 / 2020 <br />
+                  &#11088; &#11088; &#11088; &#11088; &#11088; <br />
+                  <i>$ 499.99</i>
+                </small>{" "}
+                <br />
+                <Button
+                  variant="outlined"
+                  color="secondary"
+                  // style={{color:"aliceblue",border:'1px solid aliceblue'}}
+                  className=""
+                  startIcon={<ShoppingCartIcon />}
+                >
+                  {" "}
+                  Add to Cart
+                </Button>
               </p>
             </div>
           </div>
         </div>
       </div>
+
+      {/* accessories */}
+
+      <div class="PS-sec PS-seven">
+        <h1 className="PS-h1">Accessories [Controller] !  </h1>
+      </div>
+      <div class="PS-llastheader ">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="iimg col-4">
+              <img
+                className="mx-5 pl-5"
+                src="https://images.unsplash.com/photo-1610119260051-a8d0b3a57e5e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTcxfHxwbGF5c3RhdGlvbjV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                height="550"
+                width="400"
+              />
+            </div>
+            <div className="col-4 my-5 py-3">
+              <p >
+                Discover a deeper, highly immersive gaming experience that
+                brings the action to life in the palms of your hands. The
+                DualSense wireless controller offers immersive haptic feedback,
+                dynamic adaptive triggers, and a built-in microphone, all
+                integrated into an iconic comfortable design.
+              </p>
+            </div>
+            <div className="iimg col-4">
+              <img
+                className="mx-5"
+                src="https://i.pinimg.com/236x/50/f7/85/50f785a9cfa7227def05a49a409f0747.jpg"
+                height="550"
+                width="350"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="PS-lastheader  ">
+        <div className="container">
+          <div className="row ">
+            <div className="col-8 mt-5">
+              <img
+                className="mt-5"
+                src="https://mega00.blob.core.windows.net/playstation/cob1.png"
+                width="790px"
+                height="470px"
+              />
+            </div>
+            <div className="col-4 mt-5 material">
+              <p className="mt-5">
+              DualSense™ Wireless Controller
+                <br />
+                <small>
+                  {" "}
+                  Model :   44768 SKU : 6486149 <br /> Release Date : 30 / 10 / 2020 <br />
+                  &#11088; &#11088; &#11088; &#11088; &#11088; <br />
+                  <i>$ 74.99</i>
+                </small>{" "}
+                <br />
+                <Button
+                  variant="outlined"
+                  color="secondary"
+                  // style={{color:"aliceblue",border:'1px solid aliceblue'}}
+                  className=""
+                  startIcon={<ShoppingCartIcon />}
+                >
+                  {" "}
+                  Add to Cart
+                </Button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </>
   );
 }
