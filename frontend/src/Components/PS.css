@@ -1,0 +1,123 @@
+.PS-header {
+  display: flex;
+  justify-content: left;
+  /* padding: 0px 10px; */
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #070e52;
+}
+
+.PS-header p {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  min-width: 700px;
+  font-size: 30px;
+  color: aliceblue;
+  font-family: inherit;
+  /* font-weight: 700; */
+  /* text-align: left; */
+  left: -240px;
+}
+.PS-header .PS-imag {
+  position: relative;
+  left: 250px;
+  top: -260px;
+}
+.PS-image {
+  position: relative;
+  left: -210px;
+  z-index: 0inde;
+  /* top:-260px; */
+}
+
+.PS-h1 {
+  color: white;
+  font-family: "Ohno Blazeface";
+  mix-blend-mode: difference;
+}
+
+.PS-sec {
+  background-blend-mode: saturation;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+.PS-one {
+  background-image: url("https://cdn.mos.cms.futurecdn.net/Vh6eSp4siwggK7RUys72nP.jpg");
+}
+.PS-two {
+  background-image: url(https://cdn.pressstart.com.au/wp-content/uploads/2020/09/PS5-Graphic.jpg);
+}
+.PS-three {
+  background-image: url(https://www.playstationlifestyle.net/assets/uploads/2020/10/image-75.png);
+}
+.PS-four {
+  background-image:
+     /* linear-gradient(black, black), */ url(https://insiderpaper.com/wp-content/uploads/2020/10/PS5-User-Interface-1-990x557.jpg);
+}
+
+.PS-five {
+  background-image: url(https://miro.medium.com/max/2000/1*Yr4Ihm1J7SueJN-TrskJDg.jpeg);
+}
+.PS-six {
+  background-image: url(https://www.gamespot.com/a/uploads/original/1552/15524586/3755988-ps5features_gamepresets.jpg);
+}
+
+/* // middle section */
+.PS-midheader {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 150vh;
+  width: 100vw;
+  background: black;
+}
+.PS-midheader-div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+.PS-midheader-div img {
+  width: 1000px;
+  height: 450px;
+}
+.PS-Allheader img {
+    width: 300px;
+    height: 190px;
+}
+.PS-midheader-div h1 {
+    font-family: "Ohno Blazeface";
+    color: aliceblue;
+    /* justify-content: center ;
+    align-items: flex-start; */
+}
+.PS-midheader-div p {
+    color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+    font-family: inherit;
+}
+.PS-Allheaderleft {
+  text-align: left;
+}
+.PS-Allheaderleft {
+  text-align: left;
+}
+.PS-img1{
+    
+}
+.PS-img2{
+    
+}

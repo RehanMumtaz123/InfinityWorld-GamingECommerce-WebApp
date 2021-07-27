@@ -136,7 +136,7 @@ function Home() {
             <img
               src="https://mega00.blob.core.windows.net/projectimages/Home-mid-section.jpg"
               alt=""
-              width="1540"
+              width="1519"
               height="690"
             />
             <h2 className="mid-section-h2">
