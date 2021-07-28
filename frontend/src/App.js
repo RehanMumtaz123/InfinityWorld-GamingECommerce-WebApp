@@ -4,6 +4,7 @@ import Footer from "./Components/footer";
 import About from "./Components/About";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Register from "./Components/Register";
+import Xbox from "./Components/XB";
 import PS from "./Components/PS";
 
 
@@ -22,6 +23,10 @@ function App() {
           </Route>
           <Route path="/consoles/ps5">
             <PS />
+            <Footer />
+           </Route>
+          <Route path="/consoles/xb">
+            <Xbox />
             <Footer />
            </Route>
           <Route path="/register">
