@@ -230,8 +230,7 @@ export default function PS() {
                 <Button
                   variant="outlined"
                   color="secondary"
-                  // style={{color:"aliceblue",border:'1px solid aliceblue'}}
-                  className=""
+                  style={{borderBlockColor:'red', border:'3px solid'}}
                   startIcon={<ShoppingCartIcon />}
                 >
                   {" "}

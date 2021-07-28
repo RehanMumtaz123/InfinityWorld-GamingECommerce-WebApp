@@ -1,0 +1,169 @@
+.XB-header {
+    display: flex;
+    justify-content: left;
+    /* padding: 0px 10px; */
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: #014e1f;
+  }
+  
+  .XB-header p {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-width: 700px;
+    font-size: 30px;
+    color: aliceblue;
+    font-family: inherit;
+    /* font-weight: 700; */
+    /* text-align: left; */
+    left: -240px;
+  }
+  .XB-header .XB-imag {
+    position: relative;
+    left: 250px;
+    top: -260px;
+  }
+  .XB-image {
+    position: relative;
+    left: -210px;
+    z-index: 0inde;
+    /* top:-260px; */
+  }
+  
+  .XB-h1 {
+    color: white;
+    font-family: "Ohno Blazeface";
+    mix-blend-mode: difference;
+  }
+  
+  .XB-sec {
+    background-blend-mode: saturation;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .XB-one {
+    background-image: url("https://i.ytimg.com/vi/5bMg8XOcbQ0/maxresdefault.jpg");
+  }
+  .XB-two {
+    background-image: url(https://cdn.mos.cms.futurecdn.net/G3m7geHSteg5KNtdD7ufU8.jpg);
+  }
+  .XB-three {
+    background-image: url(https://i.redd.it/ioe2wn1niwsz.png);
+  }
+  .XB-four {
+    background-image:
+       /* linear-gradient(black, black), */ url(https://news.xbox.com/en-us/wp-content/uploads/sites/2/2020/08/Xbox-Series-X-Community-Acticity.jpg?resize=940,528);
+  }
+  
+  .XB-five {
+    background-image: url(https://static2.gamerantimages.com/wordpress/wp-content/uploads/2020/11/Games-sorted-by-console.jpg);
+  }
+  .XB-six {
+    background-image: url(https://www.avforums.com/attachments/935775/);
+  }
+  .XB-seven {
+    background-image: url(https://wallpaperaccess.com/full/4446006.jpg);
+    /* background-image: url(https://i2.wp.com/manualdosgames.com/wp-content/uploads/2020/10/PS5-2.png); */
+  }
+  /* // middle section */
+  .XB-midheader {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 150vh;
+    width: 100vw;
+    background: rgb(1, 73, 19);
+  }
+  .XB-midheader-div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+  .XB-midheader-div img {
+    width: 1000px;
+    height: 450px;
+  }
+  .XB-midheader-div h1 {
+    font-family: "Ohno Blazeface";
+    color: aliceblue;
+  }
+  .XB-midheader-div p {
+    color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+    font-family: inherit;
+  }
+  .XB-Allheaderleft {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .XB-Allheaderleft img {
+    width: 200px;
+    height: 190px;
+  }
+  .XB-Allheaderleft b {
+    text-align: center;
+    font-size: 20px;
+    color: aliceblue;
+  }
+  .XB-Allheaderleft h3 {
+    font-family: "Ohno Blazeface";
+    color: aliceblue;
+    text-align: center;
+  }
+  
+  /* // */
+  .XB-lastheader {
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(1, 73, 19);
+  }
+  
+  .material {
+    position: relative;
+    font-size: 30px;
+    color: aliceblue;
+    font-family: inherit;
+    top: 40px;
+  }
+  
+  /* new */
+  .XB-llastheader {
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    background: black;
+  }
+  .iimg {
+    background-blend-mode: saturation;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .XB-llastheader p {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      font-family: unset;
+      font-size: 29px;
+      color: aliceblue;
+      align-items: center;
+    }
