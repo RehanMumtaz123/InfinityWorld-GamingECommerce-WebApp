@@ -5,6 +5,7 @@ import About from "./Components/About";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Register from "./Components/Register";
 import Xbox from "./Components/XB";
+import Pgam from "./Components/PGam";
 import PS from "./Components/PS";
 import Nav from "./Components/Navigation";
 
@@ -34,6 +35,10 @@ function App() {
            </Route>
           <Route path="/consoles/xb">
             <Xbox />
+            <Footer />
+           </Route>
+          <Route path="/games/ps5">
+            <Pgam />
             <Footer />
            </Route>
           <Route path="/register">

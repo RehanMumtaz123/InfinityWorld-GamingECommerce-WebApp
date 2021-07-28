@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import Typewriter from 'typewriter-effect';
 import { Carousel } from "3d-react-carousal";
 import viddeo from "../pexels-rodnae-productions-7914835.mp4";
 import delsvg from "../svg/service-delivery.svg";
@@ -58,12 +59,21 @@ function Home() {
             >
               {/* <source /> */}
             </video>
-
-            <div className="video-overlay">
-              <h1 className="video-text">
-                Full-Screen Background Video <br />
-                Using CSS Grid &amp; object-fit
-              </h1>
+            <div className="video-overlay video-text">             
+            <Typewriter className="video-text" style={{color:'white'}}
+              onInit={(typewriter) => {
+                typewriter
+                .changeDelay(40)
+                  .typeString("<h1>From future adventures, to current obsessions</h1>")
+                  .pauseFor(1000)
+                  .deleteChars(18)
+                  .typeString("<h1>classic titles </h1>")
+                  .deleteChars(15)
+                  .pauseFor(1900)
+                  .typeString("<h1> <br> thousands of favorites  across four generations of Gaming <br> look and play best on PS and XBOX</h1>")
+                  .start();
+              }}
+            />
             </div>
           </header>
         </div>
@@ -406,7 +416,6 @@ function Home() {
           </div>
         </div>
       </section>
-      
     </>
   );
 }
