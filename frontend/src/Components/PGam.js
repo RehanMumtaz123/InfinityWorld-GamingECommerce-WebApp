@@ -1,5 +1,6 @@
 import React from "react";
-import './PGam.css'
+import "../css/PGam.css";
+import Ps5 from "../Games/Ps5";
 function PGam() {
   return (
     <>
@@ -32,11 +33,16 @@ function PGam() {
           </div>
         </div>
       </div>
-      <br />
-      <h2 className="games-h2">
-        <span>THIS IS A TEST <br /> plaSTtion tm nwetwojk</span>
-      </h2>
-      
+      <div className="games-div-h2">
+        <br />
+
+        <h2 className="games-h2">
+          <span>
+            THIS IS A TEST <br /> plaSTtion tm nwetwojk
+          </span>
+        </h2>
+      </div>
+      <Ps5 />
     </>
   );
 }

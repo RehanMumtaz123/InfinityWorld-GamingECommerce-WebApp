@@ -5,7 +5,8 @@ export default {
         name: 'Aliens Fireteam Elite - PlayStation 5',
         image: 'https://www.shopto.net/userdata/collection/original/56092_75_all-tiles-artboards-aliens-fireteam-elitelarge-tile-left.jpg',
         price: 39.99,
-        rating: 4
+        rating: 4,
+        description :'',
       },
       {
         _id: '1002',
@@ -33,97 +34,6 @@ export default {
         name: "Demon's Souls - PlayStation 5",
         image: 'https://www.shopto.net/userdata/collection/original/55950_74___demon-souls.jpg',
         price: 59.99,
-        rating: 4
-      },
-      {
-        _id: '001',
-        name: 'Aliens Fireteam Elite - PlayStation 5',
-        image: 'https://www.shopto.net/userdata/collection/original/56092_75_all-tiles-artboards-aliens-fireteam-elitelarge-tile-left.jpg',
-        price: 39.99,
-        rating: 4
-      },
-      {
-        _id: '001',
-        name: 'Aliens Fireteam Elite - PlayStation 5',
-        image: 'https://www.shopto.net/userdata/collection/original/56092_75_all-tiles-artboards-aliens-fireteam-elitelarge-tile-left.jpg',
-        price: 39.99,
-        rating: 4
-      },
-      {
-        _id: '001',
-        name: 'Aliens Fireteam Elite - PlayStation 5',
-        image: 'https://www.shopto.net/userdata/collection/original/56092_75_all-tiles-artboards-aliens-fireteam-elitelarge-tile-left.jpg',
-        price: 39.99,
-        rating: 4
-      },
-      {
-        _id: '001',
-        name: 'Aliens Fireteam Elite - PlayStation 5',
-        image: 'https://www.shopto.net/userdata/collection/original/56092_75_all-tiles-artboards-aliens-fireteam-elitelarge-tile-left.jpg',
-        price: 39.99,
-        rating: 4
-      },
-      {
-        _id: '001',
-        name: 'Aliens Fireteam Elite - PlayStation 5',
-        image: 'https://www.shopto.net/userdata/collection/original/56092_75_all-tiles-artboards-aliens-fireteam-elitelarge-tile-left.jpg',
-        price: 39.99,
-        rating: 4
-      },
-      {
-        _id: '001',
-        name: 'Aliens Fireteam Elite - PlayStation 5',
-        image: 'https://www.shopto.net/userdata/collection/original/56092_75_all-tiles-artboards-aliens-fireteam-elitelarge-tile-left.jpg',
-        price: 39.99,
-        rating: 4
-      },
-      {
-        _id: '001',
-        name: 'Aliens Fireteam Elite - PlayStation 5',
-        image: 'https://www.shopto.net/userdata/collection/original/56092_75_all-tiles-artboards-aliens-fireteam-elitelarge-tile-left.jpg',
-        price: 39.99,
-        rating: 4
-      },
-      {
-        _id: '001',
-        name: 'Aliens Fireteam Elite - PlayStation 5',
-        image: 'https://www.shopto.net/userdata/collection/original/56092_75_all-tiles-artboards-aliens-fireteam-elitelarge-tile-left.jpg',
-        price: 39.99,
-        rating: 4
-      },
-      {
-        _id: '001',
-        name: 'Aliens Fireteam Elite - PlayStation 5',
-        image: 'https://www.shopto.net/userdata/collection/original/56092_75_all-tiles-artboards-aliens-fireteam-elitelarge-tile-left.jpg',
-        price: 39.99,
-        rating: 4
-      },
-      {
-        _id: '001',
-        name: 'Aliens Fireteam Elite - PlayStation 5',
-        image: 'https://www.shopto.net/userdata/collection/original/56092_75_all-tiles-artboards-aliens-fireteam-elitelarge-tile-left.jpg',
-        price: 39.99,
-        rating: 4
-      },
-      {
-        _id: '001',
-        name: 'Aliens Fireteam Elite - PlayStation 5',
-        image: 'https://www.shopto.net/userdata/collection/original/56092_75_all-tiles-artboards-aliens-fireteam-elitelarge-tile-left.jpg',
-        price: 39.99,
-        rating: 4
-      },
-      {
-        _id: '001',
-        name: 'Aliens Fireteam Elite - PlayStation 5',
-        image: 'https://www.shopto.net/userdata/collection/original/56092_75_all-tiles-artboards-aliens-fireteam-elitelarge-tile-left.jpg',
-        price: 39.99,
-        rating: 4
-      },
-      {
-        _id: '001',
-        name: 'Aliens Fireteam Elite - PlayStation 5',
-        image: 'https://www.shopto.net/userdata/collection/original/56092_75_all-tiles-artboards-aliens-fireteam-elitelarge-tile-left.jpg',
-        price: 39.99,
         rating: 4
       },
     ],

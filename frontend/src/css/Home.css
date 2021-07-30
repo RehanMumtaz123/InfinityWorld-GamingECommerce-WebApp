@@ -52,6 +52,7 @@
   /* line-height: 1.5; */
   /* letter-spacing: 0.02em; */
   color: #fff;
+  mix-blend-mode: difference;
   
   font-family: "Ohno Blazeface";
   text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4);
@@ -60,6 +61,8 @@
   display: inline;
   width: 100px;
   font-family: "Ohno Blazeface";
+  mix-blend-mode: difference;
+
   font-size: 40px;
 }
 /* -------------------- */

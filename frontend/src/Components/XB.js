@@ -1,6 +1,6 @@
 import React from "react";
-import "./XB.css";
-import vid from "../White Bold Gamer (Hacks or Reviews) Gaming YouTube Video Intro.mp4";
+import "../css/XB.css";
+import vid from "../videos/White Bold Gamer (Hacks or Reviews) Gaming YouTube Video Intro.mp4";
 import { Button } from "@material-ui/core";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 export default function XB() {

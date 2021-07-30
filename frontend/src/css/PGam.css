@@ -1,0 +1,20 @@
+.games-div-h2,
+.games-div-h2 span {
+  background: url(https://mega00.blob.core.windows.net/game-pg/ps-bg.png)
+    no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.games-h2 {
+  /* width: 100%; */
+  text-align: center;
+  border-bottom: 4px solid #000;
+  line-height: 0.1em;
+  /* margin: px 0 20px; */
+}
+
+.games-h2 span {
+  /* background: #fff; */
+  /* padding: 0 10px; */
+}

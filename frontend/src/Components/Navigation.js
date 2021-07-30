@@ -1,5 +1,5 @@
 import React from 'react'
-import './Navigation.css'
+import '../css/Navigation.css'
 function Navigation() {
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent nav-clr">

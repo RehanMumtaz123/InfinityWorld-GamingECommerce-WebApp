@@ -1,7 +1,7 @@
 import React from "react";
 import Contact from "./Contact";
-import aboutvideo from "../Pink and Cream Baking Food YouTube Video Intro.mp4";
-import "./About.css";
+import aboutvideo from "../videos/Pink and Cream Baking Food YouTube Video Intro.mp4";
+import "../css/About.css";
 function about() {
   return (
     <>

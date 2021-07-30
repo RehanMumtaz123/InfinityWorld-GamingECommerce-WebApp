@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Register.css";
+import "../css/Register.css";
 function Login() {
   useEffect(() => {
     document.querySelector(".img__btn").addEventListener(

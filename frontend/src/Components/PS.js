@@ -1,6 +1,6 @@
 import React from "react";
-import "./PS.css";
-import vidd from "../Green and Red Clean Video-centric Accessories Review Fashion 169 Video (1).mp4";
+import "../css/PS.css";
+import vidd from "../videos/Green and Red Clean Video-centric Accessories Review Fashion 169 Video (1).mp4";
 import { Button } from "@material-ui/core";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 export default function PS() {

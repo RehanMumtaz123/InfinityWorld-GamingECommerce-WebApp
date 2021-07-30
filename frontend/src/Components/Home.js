@@ -1,8 +1,8 @@
 import React from "react";
-import "./Home.css";
+import "../css/Home.css";
 import Typewriter from 'typewriter-effect';
 import { Carousel } from "3d-react-carousal";
-import viddeo from "../mAin-landing.mp4";
+import viddeo from "../videos/mAin-landing.mp4";
 import delsvg from "../svg/service-delivery.svg";
 import "../css/ihover.css";
 import "../fonts/OhnoBlazeface-14Point.ttf";
