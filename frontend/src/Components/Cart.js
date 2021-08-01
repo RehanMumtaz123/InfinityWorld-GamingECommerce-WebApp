@@ -1,31 +1,36 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { addToCart, removeFromCart } from "../actions/cartActions";
-import '../css/cart.css'
+import { addToCart, removeFromCart, xaddToCart } from "../actions/cartActions";
+import "../css/cart.css";
 function Cart(props) {
   const { id } = useParams();
   // const product = maal.PSproducts.find((x) => x._id === id);
   const qty = props.location.search
-  ? Number(props.location.search.split("=")[1])
+    ? Number(props.location.search.split("=")[1])
     : 1;
-console.log("props me kya araaha: and qty",props,qty)
+  console.log("props me kya araaha: and qty", props, qty);
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(addToCart(id, qty));
+    dispatch(xaddToCart(id, qty));
 
     return () => {};
   }, []);
 
   const removeFromCartHandler = (productId) => {
     dispatch(removeFromCart(productId));
-  }
+  };
+  const carting = (productId, e) => {
+    dispatch(addToCart(productId, e));
+    dispatch(xaddToCart(productId, e));
+  };
   const checkoutHandler = () => {
     props.history.push("/signin?redirect=shipping");
-  }
+  };
 
   return (
     <div className="cart">
@@ -51,9 +56,7 @@ console.log("props me kya araaha: and qty",props,qty)
                     Qty:
                     <select
                       value={item.qty}
-                      onChange={(e) =>
-                        dispatch(addToCart(item.product, e.target.value))
-                      }
+                      onChange={(e) => carting(item.product, e.target.value)}
                     >
                       {[...Array(item.countInStock).keys()].map((x) => (
                         <option key={x + 1} value={x + 1}>
@@ -78,8 +81,8 @@ console.log("props me kya araaha: and qty",props,qty)
       </div>
       <div className="cart-action">
         <h3>
-          Subtotal ( {cartItems.reduce((a, c) => Number(a) + Number(c.qty), 0)} items) : ${" "}
-          {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
+          Subtotal ( {cartItems.reduce((a, c) => Number(a) + Number(c.qty), 0)}{" "}
+          items) : $ {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
         </h3>
         <button
           onClick={checkoutHandler}

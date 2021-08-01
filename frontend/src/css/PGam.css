@@ -6,6 +6,15 @@
   background-size: cover;
   background-attachment: fixed;
 }
+.xgames-div-h2,
+.xgames-div-h2 span{
+  background: url(https://mega00.blob.core.windows.net/game-pg/xb-bg.png)
+  no-repeat;
+background-position: center;
+background-size: cover;
+background-attachment: fixed;
+}
+
 .games-h2 {
   /* width: 100%; */
   text-align: center;

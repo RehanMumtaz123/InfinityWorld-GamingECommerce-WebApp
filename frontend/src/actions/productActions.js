@@ -27,16 +27,16 @@ const listProducts = () => async (dispatch) => {
     dispatch({ type: PRODUCT_LIST_FAIL, payload: error.message });
   }
 };
-// const xlistProducts = () => async (dispatch) => {
-//   try {
-//     dispatch({ type: PRODUCT_LIST_REQUEST });
-//     const { data } = await axios.get("/api/products");
-//     console.log("abh", data.PSproducts);
-//     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data.XBproducts });
-//   } catch (error) {
-//     dispatch({ type: PRODUCT_LIST_FAIL, payload: error.message });
-//   }
-// };
+const xlistProducts = () => async (dispatch) => {
+  try {
+    dispatch({ type: PRODUCT_LIST_REQUEST });
+    const { data } = await axios.get("/api/products");
+    console.log("abh", data.PSproducts);
+    dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data.XBproducts });
+  } catch (error) {
+    dispatch({ type: PRODUCT_LIST_FAIL, payload: error.message });
+  }
+};
 
 const detailsProduct = (productId) => async (dispatch) => {
   try {
@@ -48,11 +48,22 @@ const detailsProduct = (productId) => async (dispatch) => {
     dispatch({ type: PRODUCT_DETAILS_FAIL, payload: error.message });
   }
 };
+const xdetailsProduct = (productId) => async (dispatch) => {
+  try {
+    dispatch({ type: PRODUCT_DETAILS_REQUEST, payload: productId });
+    const { data } = await axios.get("/api/xproducts/" + productId);
+    // console.log("ayaa kya?", data);
+    dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data });
+  } catch (error) {
+    dispatch({ type: PRODUCT_DETAILS_FAIL, payload: error.message });
+  }
+};
 
 export {
   listProducts,
   detailsProduct,
-  // xlistProducts,
+  xlistProducts,
+  xdetailsProduct,
   // saveProduct,
   // deleteProdcut,
   // saveProductReview,

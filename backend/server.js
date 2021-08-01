@@ -15,6 +15,16 @@ app.get("/api/products/:id", (req, res) => {
     res.status(404).send({ msg: "Product not found" });
   }
 });
+app.get("/api/xproducts/:id", (req, res) => {
+  const prodid = req.params.id;
+  const product = maal.XBproducts.find((x) => x._id === prodid);
+  console.log("ueh",product)
+  if (product) {
+    res.send(product);
+  } else {
+    res.status(404).send({ msg: "Product not found" });
+  }
+});
 
 
 app.get("/api/products", (req, res) => {

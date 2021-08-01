@@ -10,6 +10,8 @@ import PS from "./Components/PS";
 import CartScreen from "./Components/Cart";
 import Nav from "./Components/Navigation";
 import PSscreen from "./Components/PS-screen";
+import XBscreen from "./Components/XB-screen";
+import XB from "./Components/XGam";
 
 function App() {
   return (
@@ -41,11 +43,16 @@ function App() {
             <Pgam />
             <Footer />
           </Route>
+          <Route path="/games/xb">
+            <XB />
+            <Footer />
+          </Route>
           <Route path="/game/:id" component={PSscreen} />
+          <Route path="/xgame/:id" component={XBscreen} />
           <Route path="/cart/:id?" component={CartScreen} />
-            {/* <Nav />
+          {/* <Nav />
             <PSscreen /> */}
-            {/* <Footer /> */}
+          {/* <Footer /> */}
           {/* </Route> */}
           <Route path="/register">
             <Register />
