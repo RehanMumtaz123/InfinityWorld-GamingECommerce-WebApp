@@ -1,17 +1,26 @@
 import React, { useEffect, useState } from "react";
 import "../css/Ps5.css";
 // import mal from "../data";
-import { Link } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { listProducts} from "../actions/productActions";
+
 function Ps5(props) {
-  const [produc, setProduc] = useState([]);
+  // const [produc, setProduc] = useState([]);
+  const productList = useSelector((state) => state.productList);
+  const { products, loading, error } = productList;
+  const dispatch = useDispatch();
   useEffect(() => {
-    const fetchData = async () => {
-      const maal = await axios.get("/api/products");
-      console.log("anydata ::::>", maal.data.PSproducts);
-      setProduc(maal.data.PSproducts);
-    };
-    fetchData();
+    console.log('kia',productList)
+    dispatch(listProducts());
+
+    // const fetchData = async () => {
+    //   const maal = await axios.get("/api/products");
+    //   console.log("anydata ::::>", maal.data.PSproducts);
+    //   setProduc(maal.data.PSproducts);
+    // };
+    // fetchData();
     return () => {};
   }, []);
 
@@ -19,14 +28,21 @@ function Ps5(props) {
     <div className="games-div-h2">
       <div className="container ">
         <div className="games-sec ">
-          { produc.map((prod,_l) => {
-              // console.log("bataa:", produc.PSproducts);
+          {
+          // loading ? (
+          //   <div>Loading...</div>
+          // ) : error ? (
+          //   <div>{error}</div>
+          //   ) : 
+            (
+            products.map((pro, _l) => {
+              // console.log("bataa:", pro);
               return (
                 <div key={_l} className="mb-5">
-                  <Link to={"/game/" + prod._id}>
+                  <Link to={"/game/"+pro._id}>
                     <img
                       className="games-card"
-                      src={prod.image}
+                      src={pro.image}
                       height="100%"
                       width="100%"
                     />
@@ -34,7 +50,7 @@ function Ps5(props) {
                 </div>
               );
             })
-            }
+          )}
         </div>
       </div>
     </div>

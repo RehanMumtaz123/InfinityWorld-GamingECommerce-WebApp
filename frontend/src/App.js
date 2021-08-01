@@ -7,6 +7,7 @@ import Register from "./Components/Register";
 import Xbox from "./Components/XB";
 import Pgam from "./Components/PGam";
 import PS from "./Components/PS";
+import CartScreen from "./Components/Cart";
 import Nav from "./Components/Navigation";
 import PSscreen from "./Components/PS-screen";
 
@@ -40,11 +41,12 @@ function App() {
             <Pgam />
             <Footer />
           </Route>
-          <Route path="/game/:id">
-            <Nav />
-            <PSscreen />
+          <Route path="/game/:id" component={PSscreen} />
+          <Route path="/cart/:id?" component={CartScreen} />
+            {/* <Nav />
+            <PSscreen /> */}
             {/* <Footer /> */}
-          </Route>
+          {/* </Route> */}
           <Route path="/register">
             <Register />
           </Route>
