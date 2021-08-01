@@ -27,6 +27,16 @@ const listProducts = () => async (dispatch) => {
     dispatch({ type: PRODUCT_LIST_FAIL, payload: error.message });
   }
 };
+const PSinfo = () => async (dispatch) => {
+  try {
+    dispatch({ type: PRODUCT_LIST_REQUEST });
+    const { data } = await axios.get("/api/products");
+    // console.log("abh", data.PS);
+    dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data.PS });
+  } catch (error) {
+    dispatch({ type: PRODUCT_LIST_FAIL, payload: error.message });
+  }
+};
 const xlistProducts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });
@@ -64,6 +74,7 @@ export {
   detailsProduct,
   xlistProducts,
   xdetailsProduct,
+  PSinfo  
   // saveProduct,
   // deleteProdcut,
   // saveProductReview,

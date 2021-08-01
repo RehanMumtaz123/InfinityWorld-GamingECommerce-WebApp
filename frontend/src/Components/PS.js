@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../css/PS.css";
 import vidd from "../videos/Green and Red Clean Video-centric Accessories Review Fashion 169 Video (1).mp4";
 import { Button } from "@material-ui/core";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import { PSinfo } from "../actions/productActions";
+import { useDispatch, useSelector } from "react-redux";
 export default function PS() {
+
+  const productList = useSelector((state) => state.productList);
+  const { products, loading, error } = productList;
+  const dispatch = useDispatch();
+  useEffect(() => {
+    console.log('kia',productList)
+    dispatch(PSinfo());
+  }, []);
+
   return (
     <>
       <div className="row">
@@ -144,13 +155,14 @@ export default function PS() {
             </div>
             <div className="col-4 material">
               <p className="">
-                Sony - PlayStation 5 Console
+              {/* {console.log("ooh bhai kya aya:",products)} */}
+                {products && (<strong>{products[0]?.name}</strong>)}
                 <br />
                 <small>
                   {" "}
                   Model : 3005718 SKU : 6426149 <br /> Release Date : 11 / 12 / 2020 <br />
                   &#11088; &#11088; &#11088; &#11088; &#11088; <br />
-                  <i>$ 499.99</i>
+                  {/* <i>$ {console.log("ooh bhai kya aya:",products)}</i> */}
                 </small>{" "}
                 <br />
                 <Button
@@ -186,7 +198,7 @@ export default function PS() {
               />
             </div>
             <div className="col-4 my-5 py-3">
-              <p >
+              <p>
                 Discover a deeper, highly immersive gaming experience that
                 brings the action to life in the palms of your hands. The
                 DualSense wireless controller offers immersive haptic feedback,
@@ -218,13 +230,13 @@ export default function PS() {
             </div>
             <div className="col-4 mt-5 material">
               <p className="mt-5">
-              DualSense™ Wireless Controller
+              {/* {console.log("ooh bhai kya aya:",products[0])} */}
                 <br />
                 <small>
                   {" "}
                   Model :   44768 SKU : 6486149 <br /> Release Date : 30 / 10 / 2020 <br />
                   &#11088; &#11088; &#11088; &#11088; &#11088; <br />
-                  <i>$ 74.99</i>
+                  {/* <i>$ {console.log("ooh bhai kya aya:",products[1])}</i> */}
                 </small>{" "}
                 <br />
                 <Button

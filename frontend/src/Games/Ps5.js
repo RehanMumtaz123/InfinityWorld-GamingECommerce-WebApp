@@ -12,8 +12,8 @@ function Ps5(props) {
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log('kia',productList)
     dispatch(listProducts());
+    console.log('kia',productList)
 
     // const fetchData = async () => {
     //   const maal = await axios.get("/api/products");
