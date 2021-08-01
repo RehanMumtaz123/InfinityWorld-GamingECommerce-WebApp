@@ -5,16 +5,22 @@ import { Button } from "@material-ui/core";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { PSinfo } from "../actions/productActions";
 import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../actions/cartActions";
 export default function PS() {
 
   const productList = useSelector((state) => state.productList);
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
+
   useEffect(() => {
     console.log('kia',productList)
     dispatch(PSinfo());
-  }, []);
 
+  }, []);
+ const handleAddToCart = (id, qty) => {
+    // props.history.push("/cart/" + id + "?qty=" + qty);
+    dispatch(addToCart(id, qty));
+  };
   return (
     <>
       <div className="row">
@@ -162,7 +168,7 @@ export default function PS() {
                   {" "}
                   Model : 3005718 SKU : 6426149 <br /> Release Date : 11 / 12 / 2020 <br />
                   &#11088; &#11088; &#11088; &#11088; &#11088; <br />
-                  {/* <i>$ {console.log("ooh bhai kya aya:",products)}</i> */}
+                  <i>$ {products[0]?.price}</i>
                 </small>{" "}
                 <br />
                 <Button
@@ -171,6 +177,7 @@ export default function PS() {
                   // style={{color:"aliceblue",border:'1px solid aliceblue'}}
                   className=""
                   startIcon={<ShoppingCartIcon />}
+                  onClick={() => handleAddToCart(products[0]?._id, 1)}
                 >
                   {" "}
                   Add to Cart
@@ -230,13 +237,13 @@ export default function PS() {
             </div>
             <div className="col-4 mt-5 material">
               <p className="mt-5">
-              {/* {console.log("ooh bhai kya aya:",products[0])} */}
+              {products[1]?.name}
                 <br />
                 <small>
                   {" "}
                   Model :   44768 SKU : 6486149 <br /> Release Date : 30 / 10 / 2020 <br />
                   &#11088; &#11088; &#11088; &#11088; &#11088; <br />
-                  {/* <i>$ {console.log("ooh bhai kya aya:",products[1])}</i> */}
+                  $ {products[1]?.price}
                 </small>{" "}
                 <br />
                 <Button
@@ -244,6 +251,8 @@ export default function PS() {
                   color="secondary"
                   style={{borderBlockColor:'red', border:'3px solid'}}
                   startIcon={<ShoppingCartIcon />}
+                  onClick={() => handleAddToCart(products[1]?._id, 1)}
+
                 >
                   {" "}
                   Add to Cart

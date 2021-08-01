@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../css/XB.css";
 import vid from "../videos/White Bold Gamer (Hacks or Reviews) Gaming YouTube Video Intro.mp4";
 import { Button } from "@material-ui/core";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, xaddToCart } from "../actions/cartActions";
+import { XBinfo } from "../actions/productActions";
+
 export default function XB() {
+  const productList = useSelector((state) => state.productList);
+  const { products, loading, error } = productList;
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    console.log("kia", productList);
+    dispatch(XBinfo());
+  }, []);
+  const handleAddToCart = (id, qty) => {
+    // props.history.push("/cart/" + id + "?qty=" + qty);
+    dispatch(xaddToCart(id, qty));
+  };
+
   return (
     <>
       <div className="row">
@@ -143,7 +160,7 @@ export default function XB() {
             </div>
             <div className="col-4 material mt-5">
               <p className="">
-                Microsoft - XBOX SERIES X
+                {products[0]?.name}
                 <br />
                 <small>
                   {" "}
@@ -160,6 +177,8 @@ export default function XB() {
                   // style={{color:"aliceblue",border:'1px solid aliceblue'}}
                   className=""
                   startIcon={<ShoppingCartIcon />}
+                  onClick={() => handleAddToCart(products[0]?._id, 1)}
+
                 >
                   {" "}
                   Add to Cart
@@ -235,6 +254,7 @@ export default function XB() {
                   style={{ borderBlockColor: "black", border: "3px solid" }}
                   className=""
                   startIcon={<ShoppingCartIcon />}
+                  onClick={() => handleAddToCart(products[1]?._id, 1)}
                 >
                   {" "}
                   Add to Cart

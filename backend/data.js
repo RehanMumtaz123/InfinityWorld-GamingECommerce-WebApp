@@ -433,7 +433,7 @@ export default {
       image:
         "https://mega00.blob.core.windows.net/playstation/[CITYPNG.COM]Sony Playstation Ps5 Side View - 1732x848.png",
       coverVideo: "",
-      coverImg: "",
+      coverImg: "https://mega00.blob.core.windows.net/playstation/[CITYPNG.COM]Sony Playstation Ps5 Side View - 1732x848.png",
       img1: "",
       img2: "",
       img3: "",
@@ -449,7 +449,7 @@ export default {
       image:
         "https://mega00.blob.core.windows.net/playstation/cob1.png",
       coverVideo: "",
-      coverImg: "",
+      coverImg: "https://mega00.blob.core.windows.net/playstation/cob1.png",
       img1: "",
       img2: "",
       img3: "",
@@ -467,7 +467,7 @@ export default {
     image:
       "https://mega00.blob.core.windows.net/xbox/xbox-fin.png",
     coverVideo: "",
-    coverImg: "",
+    coverImg: "https://mega00.blob.core.windows.net/xbox/xbox-fin.png",
     img1: "",
     img2: "",
     img3: "",
@@ -483,7 +483,7 @@ export default {
     image:
       "https://mega00.blob.core.windows.net/xbox/XBOX-CONT.png",
     coverVideo: "",
-    coverImg: "",
+    coverImg: "https://mega00.blob.core.windows.net/xbox/XBOX-CONT.png",
     img1: "",
     img2: "",
     img3: "",
