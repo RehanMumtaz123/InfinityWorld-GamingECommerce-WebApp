@@ -1,4 +1,19 @@
+import bcrypt from 'bcryptjs';
 export default {
+  users: [
+    {
+      name: "Basir",
+      email: "admin@example.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: true,
+    },
+    {
+      name: "John",
+      email: "user@example.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: false,
+    },
+  ],
   PSproducts: [
     {
       _id: "1001",
@@ -433,7 +448,8 @@ export default {
       image:
         "https://mega00.blob.core.windows.net/playstation/[CITYPNG.COM]Sony Playstation Ps5 Side View - 1732x848.png",
       coverVideo: "",
-      coverImg: "https://mega00.blob.core.windows.net/playstation/[CITYPNG.COM]Sony Playstation Ps5 Side View - 1732x848.png",
+      coverImg:
+        "https://mega00.blob.core.windows.net/playstation/[CITYPNG.COM]Sony Playstation Ps5 Side View - 1732x848.png",
       img1: "",
       img2: "",
       img3: "",
@@ -442,12 +458,12 @@ export default {
       rating: 5,
       countInstock: 6,
       description: "",
-    },{
+    },
+    {
       _id: "5010",
       name: "DualSense™ Wireless Controller",
       platform: "playstation",
-      image:
-        "https://mega00.blob.core.windows.net/playstation/cob1.png",
+      image: "https://mega00.blob.core.windows.net/playstation/cob1.png",
       coverVideo: "",
       coverImg: "https://mega00.blob.core.windows.net/playstation/cob1.png",
       img1: "",
@@ -460,38 +476,38 @@ export default {
       description: "",
     },
   ],
-  XBOX: [{
-    _id: "6000",
-    name: "Microsoft - XBOX SERIES X",
-    platform: "xbox",
-    image:
-      "https://mega00.blob.core.windows.net/xbox/xbox-fin.png",
-    coverVideo: "",
-    coverImg: "https://mega00.blob.core.windows.net/xbox/xbox-fin.png",
-    img1: "",
-    img2: "",
-    img3: "",
-    img4: "",
-    price: 529.99,
-    rating: 5,
-    countInstock: 6,
-    description: "",
-  },{
-    _id: "6010",
-    name: "DualSense™ Wireless Controller",
-    platform: "xbox",
-    image:
-      "https://mega00.blob.core.windows.net/xbox/XBOX-CONT.png",
-    coverVideo: "",
-    coverImg: "https://mega00.blob.core.windows.net/xbox/XBOX-CONT.png",
-    img1: "",
-    img2: "",
-    img3: "",
-    img4: "",
-    price: 104.99,
-    rating: 4,
-    countInstock: 6,
-    description: "",
-  },
-],
+  XBOX: [
+    {
+      _id: "6000",
+      name: "Microsoft - XBOX SERIES X",
+      platform: "xbox",
+      image: "https://mega00.blob.core.windows.net/xbox/xbox-fin.png",
+      coverVideo: "",
+      coverImg: "https://mega00.blob.core.windows.net/xbox/xbox-fin.png",
+      img1: "",
+      img2: "",
+      img3: "",
+      img4: "",
+      price: 529.99,
+      rating: 5,
+      countInstock: 6,
+      description: "",
+    },
+    {
+      _id: "6010",
+      name: "DualSense™ Wireless Controller",
+      platform: "xbox",
+      image: "https://mega00.blob.core.windows.net/xbox/XBOX-CONT.png",
+      coverVideo: "",
+      coverImg: "https://mega00.blob.core.windows.net/xbox/XBOX-CONT.png",
+      img1: "",
+      img2: "",
+      img3: "",
+      img4: "",
+      price: 104.99,
+      rating: 4,
+      countInstock: 6,
+      description: "",
+    },
+  ],
 };
