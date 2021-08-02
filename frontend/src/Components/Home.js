@@ -32,6 +32,7 @@ function Home() {
       src="https://mega00.blob.core.windows.net/image-slider/ghost.jpg"
       alt="4"
       className="game-section-imag"
+      id="masla"
     />,
     <img
       src="https://mega00.blob.core.windows.net/image-slider/Resident.jpg"

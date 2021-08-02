@@ -29,7 +29,7 @@ function Cart(props) {
     dispatch(xaddToCart(productId, e));
   };
   const checkoutHandler = () => {
-    props.history.push("/signin?redirect=shipping");
+    props.history.push("/register?redirect=shipping");
   };
 
   return (

@@ -1,5 +1,5 @@
 import Axios from "axios";
-import Cookie from "js-cookie";
+// import Cookie from "js-cookie";
 import {
   CART_ADD_ITEM,
   CART_REMOVE_ITEM,
@@ -12,7 +12,7 @@ const addToCart = (productId, qty) => async (dispatch, getState) => {
     const { data } = await Axios.get("/api/products/" + productId);
     dispatch({
       type: CART_ADD_ITEM,
-      payload: { 
+      payload: {
         product: data._id,
         name: data.name,
         image: data.coverImg,
@@ -21,8 +21,13 @@ const addToCart = (productId, qty) => async (dispatch, getState) => {
         qty,
       },
     });
-    const { cart: { cartItems } } = getState();
-    Cookie.set("cartItems", JSON.stringify(cartItems));
+    const {
+      cart: { cartItems },
+    } = getState();
+    localStorage.setItem(
+      "cartItems",
+      JSON.stringify(getState().cart.cartItems)
+    );
     console.log("baabaaa", cartItems);
   } catch (error) {}
 };
@@ -40,8 +45,13 @@ const xaddToCart = (productId, qty) => async (dispatch, getState) => {
         qty,
       },
     });
-    const { cart: { cartItems } } = getState();
-    Cookie.set("cartItems", JSON.stringify(cartItems));
+    const {
+      cart: { cartItems },
+    } = getState();
+    localStorage.setItem(
+      "cartItems",
+      JSON.stringify(getState().cart.cartItems)
+    );
     console.log("baabaaa", cartItems);
   } catch (error) {}
 };
@@ -52,16 +62,18 @@ const xaddToCart = (productId, qty) => async (dispatch, getState) => {
 //   console.log("items", cartItems);
 //   Cookie.set("cartItems", JSON.stringify(cartItems));
 // };
-const removeFromCart = (productId) =>  (dispatch, getState) => {
+const removeFromCart = (productId) => (dispatch, getState) => {
   dispatch({ type: CART_REMOVE_ITEM, payload: productId });
-  const { cart: { cartItems } } = getState();
+  const {
+    cart: { cartItems },
+  } = getState();
   console.log("items", cartItems);
-  Cookie.set("cartItems", JSON.stringify(cartItems));
+  localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems));
 };
 
 export {
   addToCart,
   xaddToCart,
-   removeFromCart,
-//    saveShipping, savePayment
+  removeFromCart,
+  //    saveShipping, savePayment
 };

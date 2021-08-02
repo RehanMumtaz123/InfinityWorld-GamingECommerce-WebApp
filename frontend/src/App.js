@@ -19,14 +19,12 @@ function App() {
       <div>
         <Switch>
           <Route exact path="/">
+            <Nav />
             <Home />
             <Footer />
           </Route>
-          {/* <Route path="/nav">
-            <Nav />
-            <Footer />
-          </Route> */}
           <Route path="/team">
+            <Nav />
             <About />
             <Footer />
           </Route>
@@ -36,10 +34,12 @@ function App() {
             <Footer />
           </Route>
           <Route path="/consoles/xb">
+            <Nav />
             <Xbox />
             <Footer />
           </Route>
           <Route path="/games/ps5">
+            <Nav />
             <Pgam />
             <Footer />
           </Route>
@@ -50,6 +50,7 @@ function App() {
           <Route path="/game/:id" component={PSscreen} />
           <Route path="/xgame/:id" component={XBscreen} />
           <Route path="/cart/:id?" component={CartScreen} />
+          <Route path="/register" component={Register} />
           {/* <Nav />
             <PSscreen /> */}
           {/* <Footer /> */}
