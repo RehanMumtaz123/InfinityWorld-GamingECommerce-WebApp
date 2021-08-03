@@ -12,6 +12,8 @@ import Nav from "./Components/Navigation";
 import PSscreen from "./Components/PS-screen";
 import XBscreen from "./Components/XB-screen";
 import XB from "./Components/XGam";
+import Shippingaddress from "./Components/Shippingaddress";
+import paymentMethodscreen from "./Components/paymentMethodscreen";
 
 function App() {
   return (
@@ -47,10 +49,16 @@ function App() {
             <XB />
             <Footer />
           </Route>
+          <Route path="/Nav">
+            {/* <X/> */}
+            <Nav />
+          </Route>
           <Route path="/game/:id" component={PSscreen} />
+          <Route path="/shipping" component={Shippingaddress} />
           <Route path="/xgame/:id" component={XBscreen} />
           <Route path="/cart/:id?" component={CartScreen} />
           <Route path="/register" component={Register} />
+          <Route path="/payment" component={paymentMethodscreen} />
           {/* <Nav />
             <PSscreen /> */}
           {/* <Footer /> */}

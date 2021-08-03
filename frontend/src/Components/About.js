@@ -21,7 +21,7 @@ function about() {
         </div>
       </div>
 
-      <section className="about-image-text">
+      <section id="OurTeam" className="about-image-text">
         <div className="container">
           <div className="row">
             <div className="col-12 ">
@@ -129,7 +129,7 @@ function about() {
           <div class="row">
             <div class="col-md-6">
               <div class="our-skills-text">
-                <h4>Our Mission</h4>
+                <h4 id="OurMission">Our Mission</h4>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam
                   quo nesciunt magni deserunt necessitatibus numquam quasi vero,
@@ -141,7 +141,7 @@ function about() {
                 </p>
               </div>
               <div class="our-skills-text pt-4">
-                <h4>Our vission</h4>
+                <h4 id="OurVision">Our vission</h4>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam
                   quo nesciunt magni deserunt necessitatibus numquam quasi vero,

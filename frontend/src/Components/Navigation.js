@@ -50,60 +50,53 @@ function Navigation() {
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav ms-auto me-auto pe-5 mb-2 mb-lg-0">
             <li class="nav-item">
-              <a
+              <Link
                 class="px-4 nav-link active text-white"
                 aria-current="page"
-                href="#"
+                to="/"
               >
                 Home
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="px-4 nav-link text-white" href="#">
-                Consoles
-              </a>
-              <div class="mega-menu">
-                <div class="container">
-                  <div class="item">
-                    <h3>Playstation</h3>
-                    <a href="/consoles/ps5">
-                      <img src="https://mega00.blob.core.windows.net/projectimages/Navbar-ps.png" />
-                    </a>
-                  </div>
-
-                  <div class="item">
-                    <h3>Xbox</h3>
-                    <a href="/consoles/xb">
-                      <img src="https://mega00.blob.core.windows.net/projectimages/Navbar-xbox.png" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="px-4 nav-link text-white" href="#">
-                Games
-              </a>
-              <div class="mega-menu">
-                <div class="container">
-                  <div class="item">
-                    <h3>Playstation</h3>
-                    <a href="#">
-                      <img src="https://mega00.blob.core.windows.net/projectimages/Navbar-ps.png" />
-                    </a>
-                  </div>
-
-                  <div class="item">
-                    <h3>Xbox</h3>
-                    <a href="#">
-                      <img src="https://mega00.blob.core.windows.net/projectimages/Navbar-xbox.png" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              </Link>
             </li>
             <li class="nav-item">
-              <a class="px-4 me-5 nav-link text-white" href="#">
+              <Link
+                class="px-4 nav-link active text-white"
+                aria-current="page"
+                to="/consoles/ps5"
+              >
+                PlayStation Console
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link
+                class="px-4 nav-link active text-white"
+                aria-current="page"
+                to="/"
+              >
+                Xbox Console
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link
+                class="px-4 nav-link active text-white"
+                aria-current="page"
+                to="/games/ps5"
+              >
+                Playstation Games
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link
+                class="px-4 nav-link active text-white"
+                aria-current="page"
+                to="/"
+              >
+                Xbox Games
+              </Link>
+            </li>
+            
+            <li class="nav-item">
+              <a class="px-4 me-3 nav-link text-white" href="#">
                 Team
               </a>
             </li>

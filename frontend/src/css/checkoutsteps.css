@@ -1,0 +1,43 @@
+.checkout-steps > div {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin: 1 1rem;
+
+    border-top: 0.3rem #c0c0c0 solid;
+    color: #c0c0c0;
+    flex: 1;
+    padding: 1rem;
+    font-weight: bold;
+  }
+  .checkout-steps > div.active {
+    border-top: 5px solid #f08000;
+    color: #f08000;
+  }
+
+  /* //shipping address */
+  .mform {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+  .mform > div {
+    display: flex;
+    flex-direction: column;
+    /* margin: 0.3rem; */
+  }
+  .mform label {
+    margin: 0rem 0;
+    /* margin-bottom: 0.5rem; */
+  }
+  .minput{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0.1rem #a4a4a4 solid;
+    font-size: 1.6rem;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .minput:hover{
+    border: 0.1rem #404040 solid;
+  }

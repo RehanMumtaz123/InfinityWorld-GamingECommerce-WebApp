@@ -4,11 +4,12 @@
 .nav-link:hover {
   border-bottom: 2px solid rgb(230, 230, 238);
 }
-.nav-link:visited {
+.nav-link:active {
   border-bottom: 2px solid rgb(230, 230, 238);
 }
 .mega-menu {
   background: url(https://mega00.blob.core.windows.net/projectimages/Navbar-psvsxb.png);
+  background-size: cover;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s linear;
