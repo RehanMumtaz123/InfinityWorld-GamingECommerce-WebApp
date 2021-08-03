@@ -1,43 +1,94 @@
 .checkout-steps > div {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin: 1 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin: 1 1rem;
 
-    border-top: 0.3rem #c0c0c0 solid;
-    color: #c0c0c0;
-    flex: 1;
-    padding: 1rem;
-    font-weight: bold;
-  }
-  .checkout-steps > div.active {
-    border-top: 5px solid #f08000;
-    color: #f08000;
-  }
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+.checkout-steps > div.active {
+  border-top: 5px solid #f08000;
+  color: #f08000;
+}
 
-  /* //shipping address */
-  .mform {
-    max-width: 60rem;
-    margin: 0 auto;
-  }
-  .mform > div {
-    display: flex;
-    flex-direction: column;
-    /* margin: 0.3rem; */
-  }
-  .mform label {
-    margin: 0rem 0;
-    /* margin-bottom: 0.5rem; */
-  }
-  .minput{
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border: 0.1rem #a4a4a4 solid;
-    font-size: 1.6rem;
-    font-family: Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  .minput:hover{
-    border: 0.1rem #404040 solid;
-  }
+/* //shipping address */
+.mform {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.mform > div {
+  display: flex;
+  flex-direction: column;
+  /* margin: 0.3rem; */
+}
+.mform label {
+  margin: 0rem 0;
+  /* margin-bottom: 0.5rem; */
+}
+.minput {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.minput:hover {
+  border: 0.1rem #404040 solid;
+}
+
+/* // PLACEORDER */
+.mrow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mrow.mtop {
+  align-items: flex-start;
+}
+.mcol-2 {
+  flex: 2 1 50rem;
+}
+.mcard {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.mcard-body {
+  padding: 1rem;
+}
+.mcard-body > * {
+  margin-bottom: 0.5rem;
+}
+.msmall {
+  max-width: 5rem;
+  width: 100%;
+}
+.min-30 {
+  min-width: 30rem;
+}
+.mcol-1 {
+  flex: 1 1 25rem;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+Link {
+  text-decoration: none;
+}
+.mh1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  /* marg: ; */
+}

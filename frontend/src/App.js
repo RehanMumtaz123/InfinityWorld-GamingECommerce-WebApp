@@ -14,6 +14,8 @@ import XBscreen from "./Components/XB-screen";
 import XB from "./Components/XGam";
 import Shippingaddress from "./Components/Shippingaddress";
 import paymentMethodscreen from "./Components/paymentMethodscreen";
+import Placeorder from "./Components/Placeorder";
+import Orderscreen from "./Components/Orderscreen";
 
 function App() {
   return (
@@ -59,6 +61,8 @@ function App() {
           <Route path="/cart/:id?" component={CartScreen} />
           <Route path="/register" component={Register} />
           <Route path="/payment" component={paymentMethodscreen} />
+          <Route path="/placeorder" component={Placeorder} />
+          <Route path="/order/:id" component={Orderscreen} />
           {/* <Nav />
             <PSscreen /> */}
           {/* <Footer /> */}
