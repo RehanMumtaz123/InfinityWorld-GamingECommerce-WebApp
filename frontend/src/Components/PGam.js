@@ -26,7 +26,7 @@ function PGam() {
           </div>
           <div class="carousel-item" data-interval="2000">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkxq7TSQUZuXCpfL1vuIKj2fIikaCUOMt4XSI5jhU68ohaG9AKGlvFSUgLlFXKNhSZ3gU&usqp=CAU"
+              src="https://mega00.blob.core.windows.net/image-slider/PS5-game-image-slider.jpg"
               class="d-block w-100"
               alt="..."
             />
@@ -35,12 +35,10 @@ function PGam() {
       </div>
       <div className="games-div-h2">
         <br />
-
-        <h2 className="games-h2">
-          <span>
-            THIS IS A TEST <br /> plaSTtion tm nwetwojk
-          </span>
-        </h2>
+        <h2 className="mb-0 text-center">
+          <span className="fw-bold">PLAY STATION 5: PLAY HAS NO LIMITS</span>
+        </h2>{" "}
+        <br />
       </div>
       <Ps5 />
     </>

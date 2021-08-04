@@ -1,6 +1,29 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import "../css/Contact.css";
-function contact() {
+function Contact() {
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const PostData = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("/api/feed", {
+        fname,
+        lname,
+        email,
+        message,
+      });
+      setLname('');
+      setFname('');
+      setEmail('');
+      setMessage('');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <section className="contact">
       <div className="contact-container">
@@ -37,23 +60,46 @@ function contact() {
           <h2>Send Us A Message</h2>
           <div className="contact-formBox">
             <div className="contact-inputBox w50">
-              <input type="text" name="" required />
+              <input
+                type="text"
+                name=""
+                required
+                value={fname}
+                onChange={(e) => setFname(e.target.value)}
+              />
               <span>First Name</span>
             </div>
             <div className="contact-inputBox w50">
-              <input type="text" name="" required />
+              <input
+                type="text"
+                name=""
+                required
+                value={lname}
+                onChange={(e) => setLname(e.target.value)}
+              />
               <span>Last Name</span>
             </div>
             <div className="contact-inputBox w50">
-              <input type="text" name="" required />
+              <input
+                type="text"
+                name=""
+                value={email}
+                required
+                onChange={(e) => setEmail(e.target.value)}
+                />
               <span>Email Address</span>
             </div>
             <div className="contact-inputBox w100">
-              <textarea name="" required></textarea>
+              <textarea
+                name=""
+                required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
               <span>Please enter a message</span>
             </div>
             <div className="contact-inputBox w50">
-              <input type="submit" value="Send" />
+              <input type="submit" value="Send" onClick={PostData}/>
             </div>
           </div>
         </div>
@@ -62,4 +108,4 @@ function contact() {
   );
 }
 
-export default contact;
+export default Contact;

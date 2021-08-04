@@ -16,44 +16,43 @@ import Shippingaddress from "./Components/Shippingaddress";
 import paymentMethodscreen from "./Components/paymentMethodscreen";
 import Placeorder from "./Components/Placeorder";
 import Orderscreen from "./Components/Orderscreen";
+import OrderHistory from "./Components/OrderHistory";
+import Profile from "./Components/Profile";
 
 function App() {
   return (
     <Router>
       <div>
+            <Nav />
         <Switch>
           <Route exact path="/">
-            <Nav />
             <Home />
             <Footer />
           </Route>
           <Route path="/team">
-            <Nav />
+            {/* <Nav /> */}
             <About />
             <Footer />
           </Route>
           <Route path="/consoles/ps5">
-            <Nav />
+            {/* <Nav /> */}
             <PS />
             <Footer />
           </Route>
           <Route path="/consoles/xb">
-            <Nav />
+            {/* <Nav /> */}
             <Xbox />
             <Footer />
           </Route>
           <Route path="/games/ps5">
-            <Nav />
+            {/* <Nav /> */}
             <Pgam />
             <Footer />
           </Route>
           <Route path="/games/xb">
+            {/* <Nav /> */}
             <XB />
             <Footer />
-          </Route>
-          <Route path="/Nav">
-            {/* <X/> */}
-            <Nav />
           </Route>
           <Route path="/game/:id" component={PSscreen} />
           <Route path="/shipping" component={Shippingaddress} />
@@ -63,6 +62,8 @@ function App() {
           <Route path="/payment" component={paymentMethodscreen} />
           <Route path="/placeorder" component={Placeorder} />
           <Route path="/order/:id" component={Orderscreen} />
+          <Route path="/orderhistory" component={OrderHistory} />
+          <Route path="/profile" component={Profile} />
           {/* <Nav />
             <PSscreen /> */}
           {/* <Footer /> */}

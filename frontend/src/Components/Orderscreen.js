@@ -45,7 +45,7 @@ function Orderscreen(props) {
         }
       }
     }
-  }, [dispatch, order, sdkReady, orderId]);
+  }, [dispatch, order, sdkReady,successPay, orderId]);
   //   useEffect(() => {
   //     const addPayPalScript = async () => {
   //         try {

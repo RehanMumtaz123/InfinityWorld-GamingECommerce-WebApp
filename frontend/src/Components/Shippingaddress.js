@@ -28,35 +28,7 @@ function Shippingaddress(props) {
     dispatch(
       saveShippingAddress({ fullName, address, city, postalCode, country })
     );
-    props.history.push("/payment");
-    // const newLat = addressMap ? addressMap.lat : lat;
-    // const newLng = addressMap ? addressMap.lng : lng;
-    // if (addressMap) {
-    //   setLat(addressMap.lat);
-    //   setLng(addressMap.lng);
-    // }
-    // let moveOn = true;
-    // if (!newLat || !newLng) {
-    //   moveOn = window.confirm(
-    //     'You did not set your location on map. Continue?'
-    //   );
-    // }
-    // if (moveOn) {
-    //   dispatch(
-    //     saveShippingAddress({
-    //       fullName,
-    //       address,
-    //       city,
-    //       postalCode,
-    //       country,
-    //       lat: newLat,
-    //       lng: newLng,
-    //     })
-    //   );
-    //   props.history.push('/payment');
-    // }
-  };
-
+    props.history.push("/payment");}
   return (
     <div>
       <CheckoutSteps step1 step2></CheckoutSteps>
@@ -70,7 +42,7 @@ function Shippingaddress(props) {
             type="text"
             id="fullName"
             placeholder="Enter full name"
-            value={fullName}
+            // value={}
             onChange={(e) => setFullName(e.target.value)}
             required
             style={{ margin: 8 }}
@@ -85,7 +57,7 @@ function Shippingaddress(props) {
             type="text"
             id="address"
             placeholder="Enter Address"
-            value={address}
+            // value={address}
             onChange={(e) => setAddress(e.target.value)}
             required
             style={{ margin: 8 }}
@@ -100,7 +72,7 @@ function Shippingaddress(props) {
             type="text"
             id="city"
             placeholder="Enter City"
-            value={city}
+            // value={city}
             onChange={(e) => setCity(e.target.value)}
             required
             style={{ margin: 8 }}
@@ -115,7 +87,7 @@ function Shippingaddress(props) {
             type="text"
             id="postalCode"
             placeholder="Enter Postal Code"
-            value={postalCode}
+            // value={postalCode}
             onChange={(e) => setPostalCode(e.target.value)}
             required
             style={{ margin: 8 }}
@@ -130,7 +102,7 @@ function Shippingaddress(props) {
             type="text"
             id="country"
             placeholder="Enter Country"
-            value={country}
+            // value={country}
             onChange={(e) => setCountry(e.target.value)}
             required
             style={{ margin: 8 }}

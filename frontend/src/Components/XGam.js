@@ -11,21 +11,21 @@ function XGam() {
         <div class="carousel-inner">
           <div class="carousel-item active" data-interval="2000">
             <img
-              src="https://www.techquila.co.in/wp-content/uploads/2021/05/PlayStation-Studios-Logo-Banner-and-IP-scaled.jpg"
+              src="https://mega00.blob.core.windows.net/projectimages/Xbox-game-image1-slider.jpg"
               class="d-block w-100"
               alt="..."
             />
           </div>
           <div class="carousel-item" data-interval="2000">
             <img
-              src="https://wallpaperaccess.com/full/4648196.jpg"
+              src="https://mega00.blob.core.windows.net/projectimages/Xbox-game-image2-slider.png"
               class="d-block w-100"
               alt="..."
             />
           </div>
           <div class="carousel-item" data-interval="2000">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkxq7TSQUZuXCpfL1vuIKj2fIikaCUOMt4XSI5jhU68ohaG9AKGlvFSUgLlFXKNhSZ3gU&usqp=CAU"
+              src="https://mega00.blob.core.windows.net/projectimages/Xbox-game-image3-slider.png"
               class="d-block w-100"
               alt="..."
             />
@@ -35,11 +35,12 @@ function XGam() {
       <div className="xgames-div-h2">
         <br />
 
-        <h2 className="games-h2">
+        <h1  className="mb-0 font-weight-bold text-center">
           <span>
-            THIS IS A TEST <br /> plaSTtion tm nwetwojk
+            XBOX SERIES X | S 
           </span>
-        </h2>
+        </h1>
+            <br /> 
       </div>
       <XB />
     </>

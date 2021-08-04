@@ -39,7 +39,7 @@ function PSscreen(props) {
               allowfullscreen
               width="100%"
               style={{
-                height: "70vh",
+                height: "90vh",
               }}
             ></iframe>
           </div>

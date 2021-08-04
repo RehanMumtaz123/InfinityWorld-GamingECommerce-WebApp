@@ -71,7 +71,7 @@ function Navigation() {
               <Link
                 class="px-4 nav-link active text-white"
                 aria-current="page"
-                to="/"
+                to="/consoles/xb"
               >
                 Xbox Console
               </Link>
@@ -89,16 +89,16 @@ function Navigation() {
               <Link
                 class="px-4 nav-link active text-white"
                 aria-current="page"
-                to="/"
+                to="/games/xb"
               >
                 Xbox Games
               </Link>
             </li>
             
             <li class="nav-item">
-              <a class="px-4 me-3 nav-link text-white" href="#">
+              <Link class="px-4 me-3 nav-link text-white" to="/team">
                 Team
-              </a>
+              </Link>
             </li>
           </ul>
           <span>
@@ -144,8 +144,18 @@ function Navigation() {
                   <li>
                     <Link to="/orderhistory">Order History</Link>
                   </li> */}
-                    <li>
-                      <Link to="#signout" onClick={signoutHandler}>
+                    <li className="mb-1" >
+                      <Link to="/profile" style={{color:'white'}} >
+                        User Profile
+                      </Link>
+                    </li>
+                    <li className="mb-1">
+                      <Link to="/orderhistory" style={{color:'white'}} >
+                        Order History
+                      </Link>
+                    </li>
+                    <li className="mb-1">
+                      <Link to="#signout" onClick={signoutHandler} style={{color:'white'}}>
                         Sign Out
                       </Link>
                     </li>

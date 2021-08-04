@@ -23,11 +23,14 @@
 .mform > div {
   display: flex;
   flex-direction: column;
-  /* margin: 0.3rem; */
+  margin: 0.3rem;
+}
+.mform input {
+  padding: 0.5rem;
 }
 .mform label {
   margin: 0rem 0;
-  /* margin-bottom: 0.5rem; */
+  margin-bottom: 0.5rem;
 }
 .minput {
   padding: 1rem;
@@ -94,4 +97,70 @@ Link {
   font-weight: bolder;
   /* letter-spacing: 0.4rem; */
 
+}
+/* //mtable */
+.mtable {
+  width: 100%;
+  border-collapse: collapse;
+}
+.mtable tbody tr:nth-of-type(odd) {
+  background-color: #f4f4f4;
+}
+.mtable td,
+.mtable th {
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 0.5rem;
+}
+.mtable button {
+  margin: 0 0.2rem;
+}
+/* // cart */
+.mcart-image {
+  flex: 1 1;
+}
+.mcart-name {
+  flex: 8 1;
+}
+.mcart-price {
+  flex: 1 1;
+  font-size: 2.5rem;
+  text-align: right;
+}
+.dcart {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  align-items: flex-start;
+}
+.dcart-list {
+  flex: 3 1 60rem;
+}
+.dcart-action {
+  flex: 1 1 20rem;
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.dcart-list-container {
+  padding: 0;
+  list-style-type: none;
+  padding: 1rem;
+}
+.dcart-list-container li {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem #c0c0c0 solid;
+}
+.dcart-list-container li img {
+  max-width: 10rem;
+  max-height: 10rem;
+}
+.dcart-list-container li:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }

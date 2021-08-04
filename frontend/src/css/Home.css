@@ -1,4 +1,11 @@
 /* upper section */
+.home-page-imgsec1{
+  background: linear-gradient(to right,black,white) !important;
+}
+.home-page-imgsec2{
+  background: linear-gradient(to right ,white,rgb(117, 117, 117),white) !important;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -37,9 +44,9 @@
 
   /* Center Content */
   display: grid;
-  justify-content: start;
+  justify-content: center;
   align-content: center;
-  text-align: left;
+  text-align: center;
 
   /* Semi-transparent background */
   background-color: rgba(0, 0, 0, 0.55);

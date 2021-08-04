@@ -1,11 +1,12 @@
 import React from "react";
 import "../css/Home.css";
-import Typewriter from 'typewriter-effect';
+import Typewriter from "typewriter-effect";
 import { Carousel } from "3d-react-carousal";
 import viddeo from "../videos/mAin-landing.mp4";
 import delsvg from "../svg/service-delivery.svg";
 import "../css/ihover.css";
 import "../fonts/OhnoBlazeface-14Point.ttf";
+import { Link } from "react-router-dom";
 function Home() {
   let imag = [
     <img
@@ -29,7 +30,7 @@ function Home() {
       alt="3"
     />,
     <img
-      src="https://mega00.blob.core.windows.net/image-slider/ghost.jpg"
+      src="https://mega00.blob.core.windows.net/image-slider/ghost-of-tsushima.jpg"
       alt="4"
       className="game-section-imag"
       id="masla"
@@ -59,41 +60,45 @@ function Home() {
               type="video/mp4"
               height="10"
               width="10"
-
             >
               {/* <source /> */}
             </video>
-            <div className="video-overlay video-text">             
-            <Typewriter className="video-text" style={{color:'white'}}
-              onInit={(typewriter) => {
-                typewriter
-                .changeDelay(40)
-                  .typeString("<h1>From future adventures, to current obsessions</h1>")
-                  .pauseFor(1000)
-                  .deleteChars(18)
-                  .typeString("<h1>classic titles </h1>")
-                  .deleteChars(15)
-                  .pauseFor(1900)
-                  .typeString("<h1> <br> thousands of favorites  across four generations of Gaming <br> look and play best on PS and XBOX</h1>")
-                  .start();
-              }}
-            />
+            <div className="video-overlay video-text">
+              <Typewriter
+                className="video-text"
+                style={{ color: "white" }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .changeDelay(40)
+                    .typeString(
+                      "<h1>From future adventures, to current obsessions</h1>"
+                    )
+                    .pauseFor(1000)
+                    .deleteChars(18)
+                    .typeString("<h1>classic titles </h1>")
+                    .deleteChars(15)
+                    .pauseFor(1000)
+                    .typeString(
+                      "<h1> <br> thousands of favorites  across four generations of Gaming <br> look and play best on PS and XBOX</h1>"
+                    )
+                    .start();
+                }}
+              />
             </div>
           </header>
         </div>
       </div>
       {/* // mid-section */}
-
       <section>
         <div className="container">
           <div className="row">
             <div className="col-12 col-xs-12 text">
-              <p>NEW to Gaming World ?</p>
+              <p className="text">NEW to Gaming World ?</p>
               <p className="text-in"> ~ Not a problem anymore</p>
             </div>
           </div>
-          <div className="row">
-            <div className="col-6 col-sm">
+          <div className="row home-page-imgsec1">
+            <div className="col-6 col-sm p-0">
               {/* <div className="section-page-Home"> */}
               <div className="ih-item square effect7">
                 <a href="#">
@@ -116,12 +121,42 @@ function Home() {
                 {/* </div> */}
               </div>
             </div>
+            <div className="col-8 col-sm ">
+              <h2 className="text-center mt-5 pt-5 fw-bold">
+                LOOKING FOR CONSOLES{" "}
+              </h2>
+              <p className="py-3 text-black-50">
+                Video game consoles are a specialized form of a home computer
+                geared towards video game playing, designed with affordability
+                and accessibility to the general public in mind, but lacking in
+                raw computing power and customization. Simplicity is achieved in
+                part through the use of game cartridges or other simplified ways
+                of distribution, easing the effort of launching a game. However,
+                this leads to ubiquitous proprietary formats that creates
+                competition for market share.
+              </p>
+            </div>
+          </div>
+          <div className="mt-5 row home-page-imgsec2">
             <div className="col-6 col-sm">
-              <div className="ih-item square effect7">
+              <h2 className="text-center mt-5 pt-5 fw-bold">GAME ARENA </h2>
+              <p className="py-3 text-black-50">
+                An arena is a large enclosed platform, often circular or
+                oval-shaped, designed to showcase theatre, musical performances,
+                or sporting events. It is composed of a large open space
+                surrounded on most or all sides by tiered seating for
+                spectators, and may be covered by a roof. The key feature of an
+                arena is that the event space is the lowest point, allowing
+                maximum visibility. Arenas are usually designed to accommodate a
+                multitude of spectators.
+              </p>
+            </div>
+            <div className="col-6 col-sm p-0">
+              <div className="ih-item square effect7 ">
                 <a href="#">
                   <div className="img">
                     <img
-                      src="https://mega00.blob.core.windows.net/projectimages/Home-page-sec2.jpg"
+                      src="https://mega00.blob.core.windows.net/projectimages/Home-page-sec2.0.jpg"
                       alt="img"
                       // width="650"
                       // height="180"
@@ -132,7 +167,7 @@ function Home() {
                     <p className="inooo">
                       {" "}
                       Enjoy unrivalled freedom and complete your objectives as
-                      the game world reacts to everything you do
+                      the game world reacts to everything you do.
                     </p>
                   </div>
                 </a>
@@ -164,7 +199,7 @@ function Home() {
         <div className="container ">
           <div className="row ">
             <div className="col-12 text">
-              <p style={{ color: "wheat" }}>
+              <p style={{ color: "wheat" }} className="text">
                 Latest Hot Games Are Out Now ! <br />
                 Check Out The Games Catalogue{" "}
               </p>
@@ -355,9 +390,8 @@ function Home() {
                       to revisit the shop. would also like to point out the
                       website aftersales service is also second to none as a
                       'lost in transist' game costing $50 was replaced and
-                      dispatched as 'one day delivery' (costing them an extra
-                      4.95) without quibble. I can say:''This is very nice
-                      site''
+                      dispatched as 'one day delivery' without quibble. I can
+                      say:''This is very nice site''
                       <br /> ⭐ ⭐ ⭐ ⭐ ⭐{" "}
                     </p>
                     <div class="image">
@@ -397,21 +431,22 @@ function Home() {
                 style={{ color: "wheat" }}
               >
                 <br />
-                <br />
                 SPEAK TO OUR TEAM, <br />
                 WE DON'T BITE <br />
-                <button
-                  class="home-contact-custom-btn home-contact-btn-10"
-                  style={{ fontSize: "20px" }}
-                >
-                  Read More
-                </button>
+                <Link to="/team">
+                  <button
+                    class="home-contact-custom-btn w-25 home-contact-btn-10"
+                    style={{ fontSize: "15px" }}
+                  >
+                    Read More
+                  </button>
+                </Link>
               </div>
 
               <div className="col-6 ">
                 <img
-                  src="https://iet.ch/uploads/transforms/4ff0c9e5feb5093c616e26b18b51f3ef/1182/Footer-Woman_f9d35c2e75cded6d5435415681c0a155.png"
-                  width="600"
+                  src="https://mega00.blob.core.windows.net/projectimages/HomePage-Lastimage.png"
+                  width="550"
                   height="550"
                   className="home-contact-img"
                 />
