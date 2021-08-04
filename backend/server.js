@@ -8,7 +8,7 @@ import orderRouter from "./routers/orderRouter";
 dotenv.config();
 
 const app = express();
-
+ 
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -60,12 +60,15 @@ app.get("/api/products", (req, res) => {
 
 app.use('/api/users', userRouter);
 app.use('/api/orders', orderRouter);
+app.get('/api/config/paypal', (req, res) => {
+  res.send(process.env.PAYPAL_CLIENT_ID);
+});
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
 
-app.listen(15000, () => {
+app.listen(process.env.PORT || 15000, () => {
   console.log("server running");
 });

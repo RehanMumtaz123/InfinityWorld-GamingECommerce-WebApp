@@ -89,6 +89,9 @@ Link {
 }
 .mh1 {
   font-size: 1.8rem;
-  padding: 1rem 0;
-  /* marg: ; */
+  padding: 1rem 0;  /* marg: ; */
+  font-family: cursive;
+  font-weight: bolder;
+  /* letter-spacing: 0.4rem; */
+
 }

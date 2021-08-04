@@ -2,7 +2,7 @@ import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 // import Cookie from "js-cookie";
 import thunk from "redux-thunk";
 import { cartReducer } from "./reducers/cartReducers";
-import { orderCreateReducer, orderDetailsReducer } from "./reducers/orderReducers";
+import { orderCreateReducer, orderDetailsReducer, orderMineListReducer, orderPayReducer } from "./reducers/orderReducers";
 import {
   productDetailsReducer,
   productListReducer,
@@ -20,7 +20,7 @@ const initialState = {
       : [],
     shippingAddress: localStorage.getItem("shippingAddress")
       ? JSON.parse(localStorage.getItem("shippingAddress"))
-      : {},
+      : '',
       paymentMethod: 'PayPal',
   },
   userSignin: {
@@ -37,10 +37,11 @@ const reducer = combineReducers({
   userRegister: userRegisterReducer,
   orderCreate: orderCreateReducer,
   orderDetails: orderDetailsReducer,
+  orderPay: orderPayReducer,
+  orderMineList: orderMineListReducer,
   // productSave: productSaveReducer,
   // productDelete: productDeleteReducer,
   // productReviewSave: productReviewSaveReducer,
-  // orderPay: orderPayReducer,
   // userUpdate: userUpdateReducer,
   // myOrderList: myOrderListReducer,
   // orderList: orderListReducer,

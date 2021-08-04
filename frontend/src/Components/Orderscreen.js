@@ -1,31 +1,101 @@
 import Alert from "@material-ui/lab/Alert";
-import React, { useEffect } from "react";
+import { PayPalButton } from "react-paypal-button-v2";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { detailsOrder } from "../actions/orderActions";
+import { detailsOrder, payOrder } from "../actions/orderActions";
 import LoadingBox from "./LoadingBox";
+import { ORDER_PAY_RESET } from "../constants/orderConstants";
 function Orderscreen(props) {
   const orderId = props.match.params.id;
-
+  const [sdkReady, setSdkReady] = useState(false);
   const dispatch = useDispatch();
   const orderDetails = useSelector((state) => state.orderDetails);
   const { order, loading, error } = orderDetails;
-  useEffect(() => {
-    dispatch(detailsOrder(orderId));
-  }, [dispatch, orderId]);
+  const orderPay = useSelector((state) => state.orderPay);
+  const {
+    loading: loadingPay,
+    error: errorPay,
+    success: successPay,
+  } = orderPay;
 
-  return loading ? (
-    <LoadingBox></LoadingBox>
-  ) : error ? (
-    <Alert
-      style={{ backgroundColor: "pink", width: "100vw" }}
-      severity="secondary"
-    >
-      {error}
-    </Alert>
-  ) : (
+  useEffect(() => {
+    const addPayPalScript = async () => {
+      const script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src =
+        "https://www.paypal.com/sdk/js?client-id=AdRJuaKnTxzGBsXg3uzUHc3YQ1xyQLHKcVcKLOAaJ0mm8GgJjMpLleK7G6uQmO3Rd89suksTf51EH6qa";
+      script.async = true;
+      script.onload = () => {
+        setSdkReady(true);
+      };
+      document.body.appendChild(script);
+    };
+    //   console.log("otr", order);
+    if (!order || successPay || (order && order._id !== orderId)) {
+      dispatch({ type: ORDER_PAY_RESET });
+      dispatch(detailsOrder(orderId));
+    } else {
+      if (true) {
+        if (!window.paypal) {
+          addPayPalScript();
+        } else {
+          setSdkReady(true);
+        }
+      }
+    }
+  }, [dispatch, order, sdkReady, orderId]);
+  //   useEffect(() => {
+  //     const addPayPalScript = async () => {
+  //         try {
+  //             // const { data } = await axios.get("http://127.;0.:15000/api/config/paypal");
+  //             // console.log({
+  //             //   RESPONSE: data,
+  //             // });
+  //             const script = document.createElement("script");
+  //             script.type = "text/javascript";
+  //             script.src = "https://www.paypal.com/sdk/js?client-id=AZVH6nyVyk6ny_Uw1XRil7xQoyeiZEnde8TTpvOWZyyPlqYUSm4CLJb4rDLCWnxyAgu8Po5CjftEhxza";
+  //             script.async = true;
+  //             script.onload = () => {
+  //               setSdkReady(true);
+  //             };
+  //             document.body.appendChild(script);
+  //             console.log(script);
+  //         }
+  //     catch(err){
+  //         console.log(err)
+  //     }
+  //     };
+  //     if (!window.paypal) {
+  //       console.log("ADDING PAYPAL SCRIPT");
+  //       addPayPalScript();
+  //     }
+  //   }, []);
+  const successPaymentHandler = (paymentResult) => {
+    dispatch(payOrder(order, paymentResult));
+  };
+
+  if (error) {
+    return (
+      <Alert
+        style={{ backgroundColor: "pink", width: "100vw" }}
+        severity="secondary"
+      >
+        {error}
+      </Alert>
+    );
+  }
+
+  if (loading || !order) {
+    return <LoadingBox />;
+  }
+
+  console.log({ order });
+
+  return (
     <div>
-      <h1 className="mh1">Order {order._id}</h1>
+      <h1 className="mh1 mx-5 my-3">Order {order._id}</h1>
       <div className="mrow mtop">
         <div className="mcol-2">
           <ul>
@@ -44,6 +114,23 @@ function Orderscreen(props) {
                   {order.shippingAddress.postalCode},
                   {order.shippingAddress.country}
                 </p>
+                <div>
+                  {order.isDelivered ? (
+                    <Alert
+                      style={{ backgroundColor: "pink", width: "100%" }}
+                      severity="secondary"
+                    >
+                      Delivered at {order.deliveredAt}
+                    </Alert>
+                  ) : (
+                    <Alert
+                      style={{ backgroundColor: "pink", width: "100%" }}
+                      severity="secondary"
+                    >
+                      Not delivered
+                    </Alert>
+                  )}
+                </div>
               </div>
             </li>
             <li>
@@ -52,6 +139,23 @@ function Orderscreen(props) {
                 <p>
                   <strong>Method:</strong> {order.paymentMethod}
                 </p>
+                <div>
+                  {order.isPaid ? (
+                    <Alert
+                      style={{ backgroundColor: "lightgreen", width: "100%" }}
+                      severity="success"
+                    >
+                      {order.paidAt}
+                    </Alert>
+                  ) : (
+                    <Alert
+                      style={{ backgroundColor: "pink", width: "100%" }}
+                      severity="secondary"
+                    >
+                      Not Paid
+                    </Alert>
+                  )}
+                </div>
               </div>
             </li>
             <li>
@@ -119,6 +223,29 @@ function Orderscreen(props) {
                   </div>
                 </div>
               </li>
+              {!order.isPaid && (
+                <li>
+                  {!sdkReady ? (
+                    <LoadingBox></LoadingBox>
+                  ) : (
+                    <>
+                      {errorPay && (
+                        <Alert
+                          style={{ backgroundColor: "pink", width: "100vw" }}
+                          severity="secondary"
+                        >
+                          {errorPay}
+                        </Alert>
+                      )}
+                      {loadingPay && <LoadingBox></LoadingBox>}
+                      <PayPalButton
+                        amount={order.totalPrice}
+                        onSuccess={successPaymentHandler}
+                      ></PayPalButton>
+                    </>
+                  )}
+                </li>
+              )}
             </ul>
           </div>
         </div>
